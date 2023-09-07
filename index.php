@@ -64,11 +64,12 @@ include('connect.php');
     
     move_uploaded_file($pimg_tmp_name  , 'img/' . $pimg_name );
 
-  }
-    
+}
 
 
-    ?>
+
+// header("location: fetch.php") ;
+?>
     </div>
 </body>
 </html>
