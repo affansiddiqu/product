@@ -1,8 +1,9 @@
 <?php
 require('connect.php');
+include('header.php');
 
-$fetch = "Select * from `product`";
-// $fetch = "Select * from `product` WHERE `status` = 1";
+// $fetch = "Select * from `product`";
+$fetch = "Select * from `product` WHERE `status` = 1";
 $query = mysqli_query($connect , $fetch);
 
 if ($query) {
@@ -24,6 +25,7 @@ if ($query) {
 
 <table class = "table table-bordered text-center">
     <thead class = "table table-dark">
+        <th>ID</th>
         <th>Name</th>
         <th>Category</th>
         <th>Description</th>
@@ -38,13 +40,13 @@ while ($row = mysqli_fetch_assoc($query)) {
         ?>
 
         <tr>
+            <td><?php echo $row ['Id']?></td>
             <td><?php echo $row ['Name']?></td>
             <td><?php echo $row ['Category']?></td>
             <td><?php echo $row ['Description']?></td>
-            <td> <img src="<?php echo 'img/' . $row['Image']?>" alt="" height="50px" width="50px"> </td>
+            <td> <img src="<?php echo 'img/' . $row['Image']?>" alt="" height="70px" width="70px"> </td>
             <td> <a href="updatedata.php?id=<?php echo $row['Id'];?>" class = "btn btn-primary" > UPDATE </a> </td>
-            <!-- <td> <a href="del.php?id=<?php echo $row['Id'];?>" class = "btn btn-danger" >TRASH</a></td> -->
-            <td> <a href="delete.php?id=<?php echo $row['Id'];?>" class = "btn btn-danger" >DELETE</a></td>
+            <td> <a href="del.php?id=<?php echo $row['Id'];?>" class = "btn btn-success" >TRASH</a></td>
         </tr>
 
         <?php

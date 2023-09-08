@@ -1,6 +1,7 @@
 <?php
 
 include('connect.php');
+include('header.php');
 
 ?>
  <html lang="en">

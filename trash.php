@@ -1,6 +1,7 @@
 <?php
 
 require("connect.php");
+require("header.php");
 
 $fetch = "select * from `product` where status = '0' ";
 
@@ -23,11 +24,13 @@ $data = mysqli_query($connect , $fetch);
 
 <table class = "table table-bordered text-center">
     <thead class = "table table-dark">
-        <th>ID</th>
-        <th>NAME</th>
-        <th>AGE</th>
-        <th>GENDER</th>
-        <th>DELETE DATA</th>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Descripition</th>
+        <th>Image</th>
+        <th>Delete</th>
+        <th>Restore</th>
     </thead>
     <tbody>
 
@@ -36,15 +39,19 @@ while ($row = mysqli_fetch_assoc($data)) {
         ?>
 
         <tr>
-            <td><?php echo $row ['id']?></td>
-            <td><?php echo $row ['name']?></td>
-            <td><?php echo $row ['age']?></td>
-            <td><?php echo $row ['gender']?></td>
-            <td> <a href="delete.php?id=<?php echo $row['id'];?>" class = "btn btn-danger" >DELETE</a></td>
+            <td><?php echo $row ['Id']?></td>
+            <td><?php echo $row ['Name']?></td>
+            <td><?php echo $row ['Category']?></td>
+            <td><?php echo $row ['Description']?></td>
+            <td> <img src="<?php echo 'img/' . $row['Image']?>" alt="" height="50px" width="50px"> </td>
+            <td> <a href="delete.php?id=<?php echo $row['Id'];?>" class = "btn btn-danger" >DELETE</a></td>
+            <td> <a href="restore.php?id=<?php echo $row['Id'];?>" class = "btn btn-warning" >RESTORE</a></td>
         </tr>
 
         <?php
 }
+
+// header("location: fetch.php");
 
         ?>
 

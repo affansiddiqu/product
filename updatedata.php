@@ -44,7 +44,7 @@ if (mysqli_num_rows($retl) > 0 ) {
 <!-- <h1>Form validation</h1> -->
 <hr>
 
-<form action="update.php" class="form-group" method ="post">
+<form action="update.php" class="form-group" method ="post" enctype = "multipart/form-data">
     <!-- get request server post -->
 
     <label for="Name">Id</label>
@@ -58,6 +58,9 @@ if (mysqli_num_rows($retl) > 0 ) {
 <br>
 <label for="Name">Descripition</label>
 <input type="text" name="description" class="form-control" value = "<?php echo $row['Description']?>">
+<br>
+<label for="img">image</label>
+<input type="file" name="img" class="form-control">
 <br>
 <input type="submit" name="submit" class="btn btn-dark">
 

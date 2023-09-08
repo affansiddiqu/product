@@ -5,9 +5,4 @@ if(!$connect){
     die("connnection fail");
 } 
 
-
-
-
-
-
 ?>

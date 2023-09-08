@@ -11,5 +11,5 @@ if (!$rest) {
      die("connection failed");
 }
 
-// header('location:.php');
+header('location: trash.php');
 ?>
