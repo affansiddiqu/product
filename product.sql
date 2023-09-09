@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 01, 2023 at 07:55 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Generation Time: Sep 09, 2023 at 10:22 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -32,16 +32,19 @@ CREATE TABLE `product` (
   `Name` varchar(22) NOT NULL,
   `Category` varchar(29) NOT NULL,
   `Description` varchar(222) NOT NULL,
-  `Image` varchar(11) NOT NULL
+  `Image` varchar(11) NOT NULL,
+  `status` varchar(20) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `product`
 --
 
-INSERT INTO `product` (`Id`, `Name`, `Category`, `Description`, `Image`) VALUES
-(1, 'dell', 'laptop', 'dede', 'download (1'),
-(2, 'iopjio', '6y', 'ty', 'download (1');
+INSERT INTO `product` (`Id`, `Name`, `Category`, `Description`, `Image`, `status`) VALUES
+(33, 'cars', 'civic', 'dede', 'carsss.jfif', '0'),
+(34, 'ghg', 'gg', 'gj', 'oo.jfif', '1'),
+(35, 'yx', 'g', 'gg', 'png.jfif', '1'),
+(36, 'ee', 'e', 'QA', 'oppss.jfif', '1');
 
 --
 -- Indexes for dumped tables
@@ -61,7 +64,7 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `Id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `Id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
