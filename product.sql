@@ -32,8 +32,7 @@ CREATE TABLE `product` (
   `Name` varchar(22) NOT NULL,
   `Category` varchar(29) NOT NULL,
   `Description` varchar(222) NOT NULL,
-  `Image` varchar(11) NOT NULL,
-  `status` varchar (11) Not Null Define as(1)
+  `Image` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
