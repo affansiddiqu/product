@@ -32,7 +32,8 @@ CREATE TABLE `product` (
   `Name` varchar(22) NOT NULL,
   `Category` varchar(29) NOT NULL,
   `Description` varchar(222) NOT NULL,
-  `Image` varchar(11) NOT NULL
+  `Image` varchar(11) NOT NULL,
+  `status` varchar (11) Not Null Define as(1)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -41,29 +42,7 @@ CREATE TABLE `product` (
 
 INSERT INTO `product` (`Id`, `Name`, `Category`, `Description`, `Image`) VALUES
 (1, 'dell', 'laptop', 'dede', 'download (1'),
-(2, 'iopjio', '6y', 'ty', 'download (1'),
-(3, 'iopjio', '6y', 'ty', 'download (1'),
-(4, 'iopjio', '6y', 'ty', 'download (1'),
-(5, 'iopjio', '6y', 'ty', 'download (1'),
-(6, 'iopjio', '6y', 'ty', 'download (1'),
-(7, 'iopjio', '6y', 'ty', 'download (1'),
-(8, 'iopjio', '6y', 'ty', 'download (1'),
-(9, 'iopjio', '6y', 'ty', 'download (1'),
-(10, 'iopjio', '6y', 'ty', 'download (1'),
-(11, 'iopjio', '6y', 'ty', 'download (1'),
-(12, 'iopjio', '6y', 'ty', 'download (1'),
-(13, 'iopjio', '6y', 'ty', 'download (1'),
-(14, 'iopjio', '6y', 'ty', 'download (1'),
-(15, 'iopjio', '6y', 'ty', 'download (1'),
-(16, 'iopjio', '6y', 'ty', 'download (1'),
-(17, 'iopjio', '6y', 'ty', 'download (1'),
-(18, 'iopjio', '6y', 'ty', 'download (1'),
-(19, 'iopjio', '6y', 'ty', 'download (1'),
-(20, 'iopjio', '6y', 'ty', 'download (1'),
-(21, 'iopjio', '6y', 'ty', 'download (1'),
-(22, 'iopjio', '6y', 'ty', 'download (1'),
-(23, 'iopjio', '6y', 'ty', 'download (1'),
-(24, 'iopjio', '6y', 'ty', 'download (1');
+(2, 'iopjio', '6y', 'ty', 'download (1');
 
 --
 -- Indexes for dumped tables
